@@ -26,21 +26,16 @@ namespace HW_10.Entities
         public int GetId()
         {
             int x = 0;
-
             x = Storage.Users.Count();
             x++;
             return x;
-
         }
-
         public Result checkPassword(string pass)
         {
             if (Password == pass)
-                
                 return new Result(true, null);
             else
                 return new Result(false, "password Is Incorrect.");
-
         }
 
     }

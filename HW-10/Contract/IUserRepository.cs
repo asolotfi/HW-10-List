@@ -12,8 +12,9 @@ namespace HW_10.Cantract
     {
         Result AddUser(User user);
         List<User> GetUsers();
-        Result ChangePassword(string newpass, string oldpass);
-         Result ChangeStatus(string status);
-        List<User> seartch(string username);
+        Result ChangePassword(string newpassword, string oldpass);
+        Result ChangeStatus(string status);
+        List<User> search(string username);
     }
 }
+

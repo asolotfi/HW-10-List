@@ -1,12 +1,6 @@
 ﻿using HW_10.DataBase;
 using HW_10.Entities;
 using HW_10.Repository;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HW_10.UserService
 {
@@ -15,8 +9,8 @@ namespace HW_10.UserService
         UserRepository userRepository = new UserRepository();
         public Result Register(User user, string password)
         {
-            var resultch = user.checkPassword(password);
-            if (resultch.IsSucces)
+            var results = user.checkPassword(password);
+            if (results.IsSucces)
             {
                 var result = userRepository.AddUser(user);
                 if (result.IsSucces)
@@ -29,11 +23,8 @@ namespace HW_10.UserService
                 }
             }
             return new Result(false);
-
         }
-
         public Result login(User userO, string password)
-
         {
             try
             {
@@ -42,10 +33,12 @@ namespace HW_10.UserService
                 {
                     if (user.UserName == userO.UserName)
                     {
-                        Storage.Onlineuser = userO;
                         var res = user.checkPassword(password);
-                       
-                        return new Result(true, "login is successfull");
+                        if (res.IsSucces)
+                        {
+                            Storage.Onlineuser = userO;
+                            return new Result(true, "login is successfull");
+                        }
                     }
                 }
             }
@@ -53,21 +46,19 @@ namespace HW_10.UserService
             {
                 return new Result(false, "user not found");
             }
-
             return new Result(false);
         }
 
-        public Result ChhangePassword(string newpass, string oldpass)
+        public Result ChangePassword(string newpass, string oldpass)
         {
             var result = userRepository.ChangePassword(newpass, oldpass);
             if (result.IsSucces)
             {
-               
-                return new Result(true,"change password is successfull");
+                return new Result(true, "change password is successful");
             }
             else
             {
-                return new Result(true, "change password is unsuccessfull");
+                return new Result(true, "change password is unsuccessful");
             }
         }
         public Result ChangeStatus(string status)
@@ -75,35 +66,22 @@ namespace HW_10.UserService
             var result = userRepository.ChangeStatus(status);
             if (result.IsSucces)
             {
-                
-                    var users = userRepository.GetUsers();
-                    foreach (var user in users)
-                    {
-                        if (user.UserName == Storage.Onlineuser.UserName)
-                        {
-                            Storage.Onlineuser.Status = status;
-
-                            return new Result(true, "changestatus is successfull");
-                        }
-                    }
-            
+                return new Result(true, "change status is successful");
             }
-          
-                return new Result(true, "change status is unsuccessfull");
-           
-           
+            return new Result(true, "change status is unsuccessful");
         }
-        public Result seartch(string username)
+        public Result search(string username)
         {
-            var result = userRepository.seartch(username);
-            if (result.Count>0)
-            {foreach(User user in result)
+            var result = userRepository.search(username);
+            if (result.Count > 0)
+            {
+                foreach (User user in result)
                 {
                     Console.WriteLine($"{user.UserName} | Status:{user.Status}");
-                }             
+                }
+                return new Result(true);
             }
-          
-            return new Result(true, "change status is unsuccessfull");
+            return new Result(false, " no user found");
         }
     }
 }

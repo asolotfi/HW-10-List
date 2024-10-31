@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OfnOOMwVXGw=",
+  "dgSpecHash": "19TdVB/B0hI=",
   "success": true,
-  "projectFilePath": "H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\HW-10.csproj",
+  "projectFilePath": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\HW-10.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lotfi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

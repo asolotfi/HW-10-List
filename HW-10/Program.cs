@@ -1,34 +1,25 @@
-﻿using HW_10;
-using HW_10.DataBase;
+﻿using HW_10.DataBase;
 using HW_10.Entities;
-using HW_10.Repository;
 using HW_10.UserService;
-using Microsoft.Win32;
 using Newtonsoft.Json;
-using System.IO;
-using System.Security.AccessControl;
-using System.Xml;
 
 UserService userService = new UserService();
-
-// everyone Folder
-string directoryPath = @"c:\Botkamp Sharif\Hw-10";
+string directoryPath = @"c:\Hw-10";
 string filePath = "UsersList.json";
 string fullpath = Path.Combine(directoryPath, filePath);
-if (!Directory.Exists(directoryPath))
-{
-    Directory.CreateDirectory(directoryPath);
-
-}
-string jsonData = JsonConvert.SerializeObject(Storage.Users);
 try
 {
-    File.WriteAllText(fullpath, jsonData);
-    Console.WriteLine("Data saved to file sucssecfully");
+    if (!Directory.Exists(directoryPath))
+    {
+        Directory.CreateDirectory(directoryPath);
+        string jsonData = JsonConvert.SerializeObject(Storage.Users);
+        File.WriteAllText(fullpath, jsonData);
+        Console.WriteLine("Data saved to file successfully");
+    }
 }
-catch (Exception ex)
+catch (Exception)
 {
-    Console.WriteLine($"Data saved to file unsucssecfully");
+    Console.WriteLine($"Data saved to file unsuccessfully");
 }
 while (true)
 {
@@ -57,33 +48,49 @@ while (true)
         case "register":
             Parta = parts[2];
             partb = parts[4];
-            User user = new User(Parta, partb);
-            var results = userService.Register(user, partb);
-            if (results.IsSucces)
+            if (parts[1] == "--username" && parts[3] == "--password")
             {
-                Console.WriteLine("register is successfull");
-                Console.ReadLine();
+                User user = new User(Parta, partb);
+                var results = userService.Register(user, partb);
+                if (results.IsSucces)
+                {
+                    Console.WriteLine("register is successful");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("register is unsuccessfully");
+                    Console.ReadLine();
+                }
             }
             else
             {
-                Console.WriteLine("register is unsuccessfull");
+                Console.WriteLine("Enter command correct for example Register --username aso@ --password 123");
                 Console.ReadLine();
             }
             break;
         case "login":
             Parta = parts[2];
             partb = parts[4];
-            User userl = new User(Parta, partb);
-            var resultl = userService.login(userl, partb);
-            if (resultl.IsSucces)
+            if (parts[1] == "--username" && parts[3] == "--password")
             {
-                Storage.Onlineuser.Status = " available";
-                Console.WriteLine("login is successfull");
-                Console.ReadLine();
+                User user = new User(Parta, partb);
+                var result = userService.login(user, partb);
+                if (result.IsSucces)
+                {
+                    Storage.Onlineuser.Status = " available";
+                    Console.WriteLine("login is successful");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.Write("USER IS NOT.");
+                    Console.ReadLine();
+                }
             }
             else
             {
-                Console.Write("register failed! username already exists.");
+                Console.WriteLine("Enter command correct for example login --username aso@ --password 123");
                 Console.ReadLine();
             }
             break;
@@ -92,10 +99,18 @@ while (true)
             {
                 Parta = parts[2];
                 partb = parts[4];
-                var resultch = userService.ChhangePassword(Parta, partb);
-                if (resultch.IsSucces)
+                if (parts[1] == "--old" && parts[3] == "--new")
                 {
-                    Console.WriteLine("change password is successfull");
+                    var restitch = userService.ChangePassword(Parta, partb);
+                    if (restitch.IsSucces)
+                    {
+                        Console.WriteLine("change password is successful");
+                        Console.ReadLine();
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Enter command correct for example changepassword --old 123 --new 1234");
                     Console.ReadLine();
                 }
             }
@@ -108,12 +123,19 @@ while (true)
         case "update":
             if (Storage.Onlineuser != null)
             {
-
                 partb = parts[3];
-                var resultch = userService.ChangeStatus(partb);
-                if (resultch.IsSucces)
+                if (parts[1] == "--status")
                 {
-                    Console.WriteLine("update status is successfull");
+                    var result = userService.ChangeStatus(partb);
+                    if (result.IsSucces)
+                    {
+                        Console.WriteLine("update status is successful");
+                        Console.ReadLine();
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Enter command correct for example update --status  notavailable");
                     Console.ReadLine();
                 }
             }
@@ -124,37 +146,35 @@ while (true)
             }
             break;
         case "search":
-            try
+
+            if (Storage.Onlineuser != null)
             {
-                if (Storage.Onlineuser != null)
+                partb = parts[3];
+                if (parts[1] == "--username")
                 {
-                    partb = parts[3];
-                    var resultch = userService.seartch(partb);
-                    if (resultch.IsSucces)
+                    var results = userService.search(partb);
+                    if (results.IsSucces)
                     {
                         Console.ReadLine();
                     }
                 }
                 else
                 {
-                    Console.WriteLine("pleas login");
+                    Console.WriteLine("Enter command correct for example Example --> search --username  as");
                     Console.ReadLine();
                 }
             }
-            catch
+            else
             {
                 Console.WriteLine("pleas login");
+                Console.ReadLine();
             }
-
-
             break;
         case "logout":
             Storage.Onlineuser = null;
-
             break;
         default:
             Console.WriteLine("unknown");
             break;
-
     }
 }

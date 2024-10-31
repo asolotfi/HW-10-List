@@ -1,4 +1,5 @@
 ﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace HW_10.DataBase
         {
             Users.Add(new User( "aso@", "123"));
             Users.Add(new User("roza@", "123"));
-            Users.Add(new User("zahra@", "123"));
+            Users.Add(new User("Zahra@", "123"));
         }
 
     }  

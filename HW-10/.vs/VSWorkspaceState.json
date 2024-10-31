@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Repository",
+    "\\Services"
   ],
+  "SelectedNode": "\\Repository\\UserRepository.cs",
   "PreviewInSolutionExplorer": false
 }
