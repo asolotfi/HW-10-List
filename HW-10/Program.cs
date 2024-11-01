@@ -1,28 +1,42 @@
-﻿using HW_10.DataBase;
+﻿using HW_10.Contract;
+using HW_10.DataBase;
 using HW_10.Entities;
+using HW_10.Repository;
+using HW_10.Services;
 using HW_10.UserService;
 using Newtonsoft.Json;
-
 UserService userService = new UserService();
-string directoryPath = @"c:\Hw-10";
-string filePath = "UsersList.json";
-string fullpath = Path.Combine(directoryPath, filePath);
-try
+UserServiceSql userServiceSql = new UserServiceSql();
+Console.WriteLine("Enter Sql=1   List=2");
+int database = int.Parse(Console.ReadLine());
+if (database == 1)
 {
-    if (!Directory.Exists(directoryPath))
+    IUserRepositoryData userRepository = new UserRepositoryDatabase();
+}
+else
+{  
+    string directoryPath = @"c:\Hw-10";
+    string filePath = "UsersList.json";
+    string fullpath = Path.Combine(directoryPath, filePath);
+    try
     {
-        Directory.CreateDirectory(directoryPath);
-        string jsonData = JsonConvert.SerializeObject(Storage.Users);
-        File.WriteAllText(fullpath, jsonData);
-        Console.WriteLine("Data saved to file successfully");
+        if (!Directory.Exists(directoryPath))
+        {
+            Directory.CreateDirectory(directoryPath);
+            string jsonData = JsonConvert.SerializeObject(Storage.Users);
+            File.WriteAllText(fullpath, jsonData);
+            Console.WriteLine("Data saved to file successfully");
+        }
+    }
+    catch (Exception)
+    {
+        Console.WriteLine($"Data saved to file unsuccessfully");
     }
 }
-catch (Exception)
-{
-    Console.WriteLine($"Data saved to file unsuccessfully");
-}
+
+
 while (true)
-{
+{ 
     Console.Clear();
     Console.WriteLine("Enter command for Example --> Register --username aso@ --password 123");
     Console.WriteLine("Enter command for Example --> login --username aso@ --password 123");
@@ -51,16 +65,33 @@ while (true)
             if (parts[1] == "--username" && parts[3] == "--password")
             {
                 User user = new User(Parta, partb);
-                var results = userService.Register(user, partb);
-                if (results.IsSucces)
+                if (database == 2)
                 {
-                    Console.WriteLine("register is successful");
-                    Console.ReadLine();
+                    var results = userService.Register(user, partb);
+                    if (results.IsSucces)
+                    {
+                        Console.WriteLine("register is successful");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.WriteLine("register is unsuccessfully");
+                        Console.ReadLine();
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("register is unsuccessfully");
-                    Console.ReadLine();
+                    var result = userServiceSql.Register(user, partb);
+                    if (result.IsSucces)
+                    {
+                        Console.WriteLine("register is successful");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.WriteLine("register is unsuccessfully");
+                        Console.ReadLine();
+                    }
                 }
             }
             else
@@ -68,6 +99,7 @@ while (true)
                 Console.WriteLine("Enter command correct for example Register --username aso@ --password 123");
                 Console.ReadLine();
             }
+
             break;
         case "login":
             Parta = parts[2];
@@ -75,17 +107,35 @@ while (true)
             if (parts[1] == "--username" && parts[3] == "--password")
             {
                 User user = new User(Parta, partb);
-                var result = userService.login(user, partb);
-                if (result.IsSucces)
+                if (database == 2)
                 {
-                    Storage.Onlineuser.Status = " available";
-                    Console.WriteLine("login is successful");
-                    Console.ReadLine();
+                    var result = userService.login(user, partb);
+                    if (result.IsSucces)
+                    {
+                        Storage.Onlineuser.Status = " available";
+                        Console.WriteLine("login is successful");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.Write("USER IS NOT.");
+                        Console.ReadLine();
+                    }
                 }
                 else
                 {
-                    Console.Write("USER IS NOT.");
-                    Console.ReadLine();
+                    var result = userServiceSql.login(user, partb);
+                    if (result.IsSucces)
+                    {
+                        Storage.Onlineuser.Status = " available";
+                        Console.WriteLine("login is successful");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.Write("USER IS NOT.");
+                        Console.ReadLine();
+                    }
                 }
             }
             else
@@ -101,11 +151,23 @@ while (true)
                 partb = parts[4];
                 if (parts[1] == "--old" && parts[3] == "--new")
                 {
-                    var restitch = userService.ChangePassword(Parta, partb);
-                    if (restitch.IsSucces)
+                    if (database == 2)
                     {
-                        Console.WriteLine("change password is successful");
-                        Console.ReadLine();
+                        var restitch = userService.ChangePassword(Parta, partb);
+                        if (restitch.IsSucces)
+                        {
+                            Console.WriteLine("change password is successful");
+                            Console.ReadLine();
+                        }
+                    }
+                    else
+                    {
+                        var restitch = userServiceSql.ChangePassword(Parta, partb);
+                        if (restitch.IsSucces)
+                        {
+                            Console.WriteLine("change password is successful");
+                            Console.ReadLine();
+                        }
                     }
                 }
                 else
@@ -126,11 +188,23 @@ while (true)
                 partb = parts[3];
                 if (parts[1] == "--status")
                 {
-                    var result = userService.ChangeStatus(partb);
-                    if (result.IsSucces)
+                    if (database == 2)
                     {
-                        Console.WriteLine("update status is successful");
-                        Console.ReadLine();
+                        var result = userService.ChangeStatus(partb);
+                        if (result.IsSucces)
+                        {
+                            Console.WriteLine("update status is successful");
+                            Console.ReadLine();
+                        }
+                    }
+                    else
+                    {
+                        var result = userServiceSql.ChangeStatus(partb);
+                        if (result.IsSucces)
+                        {
+                            Console.WriteLine("update status is successful");
+                            Console.ReadLine();
+                        }
                     }
                 }
                 else
@@ -152,10 +226,21 @@ while (true)
                 partb = parts[3];
                 if (parts[1] == "--username")
                 {
-                    var results = userService.search(partb);
-                    if (results.IsSucces)
+                    if (database == 2)
                     {
-                        Console.ReadLine();
+                        var results = userService.search(partb);
+                        if (results.IsSucces)
+                        {
+                            Console.ReadLine();
+                        }
+                    }
+                    else
+                    {
+                        var results = userServiceSql.search(partb);
+                        if (results.IsSucces)
+                        {
+                            Console.ReadLine();
+                        }
                     }
                 }
                 else
@@ -178,3 +263,4 @@ while (true)
             break;
     }
 }
+

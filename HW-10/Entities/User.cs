@@ -16,6 +16,11 @@ namespace HW_10.Entities
             Password = password;
             Status = "available";
         }
+        public User()
+        {
+            
+        }
+
 
         public int Id { get; set; }
         public string UserName { get; set; }

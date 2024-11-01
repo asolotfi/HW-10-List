@@ -8,10 +8,10 @@ namespace HW_10.Repository
     public class UserRepository : IUserRepository
     {
         string path = @"c:\Hw-10\UsersList.json";
-        public Result AddUser(User userOutput)
+        public Result AddUser(Entities.User userOutput)
         {
             var date = File.ReadAllText(path);
-            var Users = JsonConvert.DeserializeObject<List<User>>(date);
+            var Users = JsonConvert.DeserializeObject<List<Entities.User>>(date);
             var user = Users.Find(U => U.UserName == userOutput.UserName);
             if (user == null)
             {
@@ -26,10 +26,10 @@ namespace HW_10.Repository
             }
         }
 
-        public List<User> GetUsers()
+        public List<Entities.User> GetUsers()
         {
             var date = File.ReadAllText(path);
-            var Users = JsonConvert.DeserializeObject<List<User>>(date);
+            var Users = JsonConvert.DeserializeObject<List<Entities.User>>(date);
             return Users;
         }
 
@@ -38,11 +38,12 @@ namespace HW_10.Repository
             try
             {
                 var date = File.ReadAllText(path);
-                var Users = JsonConvert.DeserializeObject<List<User>>(date);
+                var Users = JsonConvert.DeserializeObject<List<Entities.User>>(date);
                 var user = Users.Find(U => U.UserName == Storage.Onlineuser.UserName && U.Password == oldpass);
                 if (user != null)
                 {
                     user.Password = newpass;
+                    //Users
                     var resultF = JsonConvert.SerializeObject(Users);
                     File.WriteAllText(path, resultF);
                     return new Result(true, "change password is successful");
@@ -59,7 +60,7 @@ namespace HW_10.Repository
             try
             {
                 var date = File.ReadAllText(path);
-                var Users = JsonConvert.DeserializeObject<List<User>>(date);
+                var Users = JsonConvert.DeserializeObject<List<Entities.User>>(date);
                 var user = Users.FirstOrDefault(U => U.UserName == Storage.Onlineuser.UserName);
                 if (user != null)
                 {
@@ -78,12 +79,12 @@ namespace HW_10.Repository
                 return new Result(false, "change password is unsuccessful");
             }
         }
-        public List<User> search(string username)
+        public List<Entities.User> search(string username)
         {
             var date = File.ReadAllText(path);
-            var Users = JsonConvert.DeserializeObject<List<User>>(date);
+            var Users = JsonConvert.DeserializeObject<List<Entities.User>>(date);
 
-            List<User> result = new List<User>();
+            List<Entities.User> result = new List<Entities.User>();
             foreach (var usernam in Users)
             {
                 int i = username.Count();

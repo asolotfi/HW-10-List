@@ -7,6 +7,7 @@ namespace HW_10.UserService
     public class UserService
     {
         UserRepository userRepository = new UserRepository();
+       
         public Result Register(User user, string password)
         {
             var results = user.checkPassword(password);

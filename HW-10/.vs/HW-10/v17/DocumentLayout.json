@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\Entities\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Entities\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\DataBase\\Storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataBase\\Storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\Repository\\UserRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\UserRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,19 +55,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Entities\\User.cs",
+              "ToolTip": "H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\Entities\\User.cs",
+              "RelativeToolTip": "Entities\\User.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T05:47:59.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Storage.cs",
+              "DocumentMoniker": "H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\DataBase\\Storage.cs",
+              "RelativeDocumentMoniker": "DataBase\\Storage.cs",
+              "ToolTip": "H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\DataBase\\Storage.cs",
+              "RelativeToolTip": "DataBase\\Storage.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T05:47:49.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
               "ToolTip": "H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\Repository\\UserRepository.cs",
               "RelativeToolTip": "Repository\\UserRepository.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAcwGsAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T16:18:23.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UserService.cs",
               "DocumentMoniker": "H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService.cs",
@@ -67,12 +101,11 @@
               "RelativeToolTip": "Services\\UserService.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T16:18:10.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T16:18:10.285Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -80,12 +113,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAHgAAAAAAAAAAAAAAIAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:26:45.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T15:26:45.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Result.cs",
               "DocumentMoniker": "H:\\aufgabe\\HW10-substring\\HW-10\\HW-10\\Result.cs",
               "RelativeDocumentMoniker": "Result.cs",

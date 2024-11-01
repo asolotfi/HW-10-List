@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|c:\\users\\lotfi\\desktop\\hw10-substring\\hw-10\\hw-10\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|solutionrelative:hw-10\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|c:\\users\\lotfi\\desktop\\hw10-substring\\hw-10\\hw-10\\repository\\userrepositorydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|solutionrelative:hw-10\\repository\\userrepositorydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|c:\\users\\lotfi\\desktop\\hw10-substring\\hw-10\\hw-10\\contract\\iuserrepositorydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|solutionrelative:hw-10\\contract\\iuserrepositorydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|c:\\users\\lotfi\\desktop\\hw10-substring\\hw-10\\hw-10\\configuration\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|solutionrelative:hw-10\\configuration\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|c:\\users\\lotfi\\desktop\\hw10-substring\\hw-10\\hw-10\\services\\userservicesql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|solutionrelative:hw-10\\services\\userservicesql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|c:\\users\\lotfi\\desktop\\hw10-substring\\hw-10\\hw-10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|solutionrelative:hw-10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|c:\\users\\lotfi\\desktop\\hw10-substring\\hw-10\\hw-10\\repository\\ruser\\userqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|solutionrelative:hw-10\\repository\\ruser\\userqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9C6F746-7A1C-4B60-8334-19079BB3ACC9}|HW-10\\HW-10.csproj|c:\\users\\lotfi\\desktop\\hw10-substring\\hw-10\\hw-10\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 307,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,28 +62,106 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "HW-10\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Entities\\User.cs*",
+              "RelativeToolTip": "HW-10\\Entities\\User.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:16:31.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserQueries.cs",
+              "DocumentMoniker": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Repository\\Ruser\\UserQueries.cs",
+              "RelativeDocumentMoniker": "HW-10\\Repository\\Ruser\\UserQueries.cs",
+              "ToolTip": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Repository\\Ruser\\UserQueries.cs",
+              "RelativeToolTip": "HW-10\\Repository\\Ruser\\UserQueries.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:54:51.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Configuration\\Configuration.cs",
+              "RelativeDocumentMoniker": "HW-10\\Configuration\\Configuration.cs",
+              "ToolTip": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Configuration\\Configuration.cs",
+              "RelativeToolTip": "HW-10\\Configuration\\Configuration.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAACBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:28:25.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserRepositoryData.cs",
+              "DocumentMoniker": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Contract\\IUserRepositoryData.cs",
+              "RelativeDocumentMoniker": "HW-10\\Contract\\IUserRepositoryData.cs",
+              "ToolTip": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Contract\\IUserRepositoryData.cs",
+              "RelativeToolTip": "HW-10\\Contract\\IUserRepositoryData.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:24:38.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UserRepositoryDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Repository\\UserRepositoryDatabase.cs",
+              "RelativeDocumentMoniker": "HW-10\\Repository\\UserRepositoryDatabase.cs",
+              "ToolTip": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Repository\\UserRepositoryDatabase.cs",
+              "RelativeToolTip": "HW-10\\Repository\\UserRepositoryDatabase.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwDgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T10:23:24.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserServiceSql.cs",
+              "DocumentMoniker": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Services\\UserServiceSql.cs",
+              "RelativeDocumentMoniker": "HW-10\\Services\\UserServiceSql.cs",
+              "ToolTip": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Services\\UserServiceSql.cs",
+              "RelativeToolTip": "HW-10\\Services\\UserServiceSql.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T10:18:27.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "HW-10\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Services\\UserService.cs",
               "RelativeToolTip": "HW-10\\Services\\UserService.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAqwBsAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAewDIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T23:06:58.911Z",
+              "WhenOpened": "2024-11-01T08:48:55.014Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Program.cs",
               "RelativeDocumentMoniker": "HW-10\\Program.cs",
               "ToolTip": "C:\\Users\\lotfi\\Desktop\\HW10-substring\\HW-10\\HW-10\\Program.cs",
               "RelativeToolTip": "HW-10\\Program.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAewEgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAwwH4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T23:03:56.786Z",
+              "WhenOpened": "2024-11-01T08:45:50.002Z",
               "EditorCaption": ""
             }
           ]
